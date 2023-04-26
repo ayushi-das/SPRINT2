@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Apache.Models.Appointment>
+
+@{
+    ViewBag.Title = "GetAppointmentByDocId";
+}
+
+<h2>Appointments</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfApp)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientAge)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhoneNumber)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DoctorId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateOfApp)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Status)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "UpdateAppointment", new { id = item.Id }) |
+        @Html.ActionLink("Details", "GetAppointmentById", new { id = item.Id }) |
+
+    </td>
+</tr>
+}
+
+</table>

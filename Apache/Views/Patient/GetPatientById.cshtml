@@ -1,0 +1,58 @@
+﻿@model Apache.Models.Patient
+
+@{
+    ViewBag.Title = "GetPatientById";
+    Layout = "~/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>GetPatientById</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PatientId }) |
+    @Html.ActionLink("Back to List", "GetAllPatients")
+</p>

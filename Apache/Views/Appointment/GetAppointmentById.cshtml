@@ -1,0 +1,74 @@
+﻿@model Apache.Models.Appointment
+
+@{
+    ViewBag.Title = "GetAppointmentById";
+}
+
+<h2>Appointment Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientAge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientAge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfApp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfApp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "UpdateAppointment", new { id = Model.Id }) |
+    @Html.ActionLink("Back", "GetAppointmentByDocId", new {id=Model.DoctorId})
+</p>

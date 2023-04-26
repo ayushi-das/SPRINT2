@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Apache.Models.Patient>
+
+@{
+    ViewBag.Title = "GetAllPatients";
+    Layout = "~/Views/Shared/_AdminView.cshtml";
+}
+
+<h2>GetAllPatients</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PatientGender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PatientGender)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DateOfBirth)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PhoneNumber)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "UpdatePatient", new { id = item.PatientId }) |
+        @Html.ActionLink("Details", "GetPatientById", new { id = item.PatientId }) |
+        @Html.ActionLink("Delete", "DeletePatient", new { id = item.PatientId })
+    </td>
+</tr>
+}
+
+</table>

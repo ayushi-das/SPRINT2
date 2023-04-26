@@ -1,0 +1,67 @@
+﻿@model Apache.Models.Doctor
+
+@{
+    ViewBag.Title = "GetDoctorById";
+}
+
+<h2>GetDoctorById</h2>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorGender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorGender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialization)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialization)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DoctorId }) |
+    @Html.ActionLink("Back to List", "GetAllDoctors")
+</p>
